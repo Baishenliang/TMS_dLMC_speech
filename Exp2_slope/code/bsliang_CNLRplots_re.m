@@ -70,7 +70,7 @@ function [P,VAL,M,Hss_single]=bsliang_CNLRplots_re(data_in,issham,rmnan,is_stat,
 
         dotlim=[0.3125 0.6875] - 1;
         figure
-        [ha, ~] = tight_subplot(2, 2,[.15 .04],[.1 .07],[.03 .03]);
+        [ha, ~] = tight_subplot(1, 4,[.15 .04],[.1 .07],[.03 .03]);
         set(gcf,'color','w');
         set(gcf,'unit','centimeter')
         set(gcf,'Position',[0 0 17.4 15])
@@ -137,6 +137,7 @@ function [P,VAL,M,Hss_single]=bsliang_CNLRplots_re(data_in,issham,rmnan,is_stat,
         end
         [P.(sgtitle).right_noise,VAL.(sgtitle).right_noise,M.(sgtitle).right_noise,Hss_single(LT,4,:)]=bsliang_CNLRsingleplot(TONE,PHON,dotlim,issham,is_stat,perDISRIB([3 4],[3 4],LT,:),TONE_mask,PHON_mask,Ylims{2},Yticks{2});
 %             title('Right Noise','FontSize',20);
+    set(gcf,'Position',[0 0 17.5 2.7]*2,'Units','centimeters')
     end
     %% plots: include sham
     if issham==1

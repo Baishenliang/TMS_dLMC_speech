@@ -39,7 +39,7 @@ function [Pss_single,Pss_compare,Hss_single,Dss_single,Dss_compare]=bsliang_CNLR
     %% plots: not sham
     if issham==0
         dotlim=[0.3125 0.6875] - 1;
-        [ha, ~] = tight_subplot(2, 2,[.15 .04],[.1 .07],[.03 .03]);
+        [ha, ~] = tight_subplot(1, 4,[.15 .04],[.1 .07],[.03 .03]);
         set(gcf,'color','w');
         set(gcf,'unit','centimeter')
         set(gcf,'Position',[0 0 17.4 15])
@@ -103,6 +103,7 @@ function [Pss_single,Pss_compare,Hss_single,Dss_single,Dss_compare]=bsliang_CNLR
         end
         [Pss_single(4,:),Pss_compare(4,:),Hss_single(4,:),Dss_single(4,:),Dss_compare(4,:)]=bsliang_CNLRsingleplot(TONE,PHONEME,dotlim,issham,perDISRIB([3 4],:,2,:),TONE_mask,PHONEME_mask);
 %         title('Right Noise','FontSize',15,'FontName','Arial');
+    set(gcf,'Position',[0 0 17.5 2.7]*2,'Units','centimeters')
     end
     %% plots: include sham
     if issham==1
@@ -168,7 +169,7 @@ Ylim=[-5 5];
     Ps_single=nan(1,4);
     Ds_single=nan(1,4);
     Ps_compare=nan(1,2);
-    Ds_compare=nan(1,4);
+    Ds_compare=nan(1,2);
     
     Hs_single=nan(1,4);
     

@@ -1,0 +1,3 @@
+#X	Y	Z	Target	NUM_STUDIES	REGION
+-40	-5	50	1	1	Target.Larynx
+-59	-3	36	2	1	Target.Tongue
